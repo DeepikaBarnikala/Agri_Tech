@@ -1,0 +1,129 @@
+/* buyerdashboard.css */
+body {
+  font-family: 'Roboto', sans-serif; /* Use a modern font */
+  margin: 0;
+  padding: 0;
+  background-color: #f8f8f8; /* Light background */
+  color: #333; /* Dark text for contrast */
+}
+
+header {
+  background-color: #4CAF50; /* Green header */
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 10px;
+}
+
+nav li {
+  display: inline-block;
+  margin: 0 15px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+}
+
+section {
+  padding: 20px;
+  margin-bottom: 20px;
+  background-color: white; /* White sections */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+h2, h3 {
+  color: #4CAF50; /* Green headings */
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+}
+
+th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-top: 10px;
+  resize: vertical;
+}
+
+footer {
+  background-color: #333;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  position: relative; /* Ensure footer stays at the bottom */
+  bottom: 0;
+  width: 100%;
+}
+
+/* ... more styles as needed */
+.filter-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.filter-options label {
+  margin-right: 5px;
+}
+
+.crop-listings {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.crop-item {
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+  transition: transform 0.2s ease; /* Smooth hover effect */
+}
+
+.crop-item:hover {
+  transform: translateY(-5px); /* Move up slightly on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Darker shadow on hover */
+}
+
+.crop-item img { /* Style for crop images (if you add them) */
+  max-width: 100%; 
+}

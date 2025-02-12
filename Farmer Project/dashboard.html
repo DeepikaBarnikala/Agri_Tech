@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgriCultur Dashboard</title>
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <div class="logo">AgriCultur</div>
+            <nav>
+                <ul>
+                    <li><a href="#">Farmer Dashboard</a></li> 
+                    <li><a href="buyerdashboard.html">Buyer Dashboard</a></li>
+                    <li><a href="#">Analytics</a></li>
+                    <li><a href="#">Fields</a></li>
+                    <li><a href="#">Harvesting</a></li>
+                    <li><a href="#">Finances</a></li>
+                    <li><a href="#">Weather</a></li>
+                    <li><a href="#">Settings</a></li>
+                </ul>
+            </nav>
+            <div class="logout">Logout</div>
+        </aside>
+
+        <main class="content">
+            <header>
+                <div class="search-bar">
+                    <input type="text" placeholder="Search any of content">
+                    <button><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+                      </svg></button> </div>
+                <div class="user-profile">
+                    <img src="user_img.jpg" alt="Profile">
+                    <div class="user-details">
+                        <h3>User Name</h3>
+                        <p>Farmer</p>
+                    </div>
+                </div>
+            </header>
+
+            <section class="summary">
+                <h2>Summary</h2>
+                <div class="crop-overview">
+                    <div class="crop-card">
+                        <h3>Wheat</h3>
+                        <p>125 Tons</p>
+                        <div class="progress-bar" style="width: 59%;"></div>
+                    </div>
+                    <div class="crop-card">
+                        <h3>Rice</h3>
+                        <p>980 Tons</p>
+                        <div class="progress-bar" style="width: 81%;"></div>
+                    </div>
+                    <div class="crop-card">
+                        <h3>Corn</h3>
+                        <p>500 Tons</p>
+                        <div class="progress-bar" style="width: 70%;"></div>
+                    </div>
+                    <div class="crop-card">
+                        <h3>Soybean</h3>
+                        <p>200 Tons</p>
+                        <div class="progress-bar" style="width: 45%;"></div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="market-insights">
+                <h2>Market Insights</h2>
+                <div class="flexx">
+                  <div class="feature">
+                    <h3>AI Price Prediction</h3>
+                    <p>Get real-time price recommendations.</p>
+                    <div id="price-prediction">Loading...</div>
+                  </div>
+                  <div class="feature">
+                    <h3>Buyer Demand Analytics</h3>
+                    <p>View what buyers are searching for.</p>
+                    <div id="buyer-demand">Loading...</div>
+                  </div>
+                </div>
+            </section>
+
+            <!-- <section class="crop-management">
+                <h2>Crop Management</h2>
+                <div class="feature">
+                    <h3>List Crops for Sale</h3>
+                    <p>Upload crop details.</p>
+                    <form id="crop-form">
+                        <input type="text" id="crop-name" placeholder="Crop Name"><br>
+                        <input type="number" id="crop-quantity" placeholder="Quantity"><br>
+                        <input type="number" id="crop-price" placeholder="Expected Price"><br>
+                        <button type="submit">List Crop</button>
+                    </form>
+                </div>
+                
+            </section>  --> 
+            <section class="crop-management">
+                <h2>Crop Management</h2>
+                <div class="feature">
+                    <h3>List Crops for Sale</h3>
+                    <p>Upload crop details.</p>
+                    <form id="crop-form">
+                        <div class="form-group">
+                            <label for="crop-name">Crop Name:</label>
+                            <input type="text" id="crop-name" name="crop-name" placeholder="Enter Crop Name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="crop-quantity">Quantity (Tons):</label>
+                            <input type="number" id="crop-quantity" name="crop-quantity" placeholder="Enter Quantity" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="crop-price">Expected Price (₹/Ton):</label>
+                            <input type="number" id="crop-price" name="crop-price" placeholder="Enter Price" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="crop-description">Description:</label>
+                            <textarea id="crop-description" name="crop-description" placeholder="Enter any details about the crop (e.g., variety, quality, etc.)"></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="crop-image">Crop Image:</label>
+                            <input type="file" id="crop-image" name="crop-image" accept="image/*">
+                        </div>
+
+                        <button type="submit" class="submit-button">List Crop</button>
+                    </form>
+                </div>
+            </section>
+
+            <section class="ai-support">
+              <h2>AI & Support</h2>
+              <div class="feature">
+                  <h3>AI Chatbot Assistance</h3>
+                  <div id="chatbot-container">
+                      <div id="chat-window"></div>
+                      <div id="chat-input">
+                          <input type="text" id="user-input" placeholder="Type your message...">
+                          <button id="send-button">Send</button>
+                      </div>
+                  </div>
+              </div>
+          </section>
+
+
+            
+          </main>
+    </div>
+    <script src="dashboard.js"></script>
+</body>
+</html>
